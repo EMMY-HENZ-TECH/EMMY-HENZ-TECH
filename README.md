@@ -13,12 +13,15 @@
       align-items: center;
       min-height: 100vh;
       margin: 0;
+      padding: 0 10px; /* Add padding for mobile */
+      box-sizing: border-box;
     }
     .container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      max-width: 600px;
+      width: 100%;
+      max-width: 800px;
     }
     .box {
       background-color: #e3f3e3;
@@ -34,6 +37,16 @@
     }
     .box:hover {
       background-color: #d1e7d1;
+    }
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
